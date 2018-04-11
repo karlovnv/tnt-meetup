@@ -2,11 +2,12 @@ local box = require('box')
 local clock = require('clock')
 
 local module = {}
+local NAME = ''
     --
     -- CREATE TABLE (id, acount_id)
-function module.init()
+function module.init(name)
     local tokens = box.schema.space.create('tokens', {if_not_exists=true})
-
+    NAME = name
     tokens:format({
         {'user_id', 'unsigned'},
         {'bucket_id', 'unsigned'},
@@ -40,7 +41,7 @@ end
 
 function module.get_all()
     -- select all
-    return box.space.tokens:select({})
+    return box.space.tokens:select({}, { limit=100 })
 end
 
 return module

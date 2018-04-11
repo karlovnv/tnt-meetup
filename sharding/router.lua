@@ -3,12 +3,12 @@ vshard = require('vshard')
 local data_api = require('data-api')
 
 local cfg = require('vshard-config')
-
+local os = require ('os')
 local name = 'router'
 
 os.execute(string.format('mkdir -p %s', name))
 
-cfg.listen = 3301
+cfg.listen = 3001
 cfg.wal_dir = name
 cfg.memtx_dir = name
 
@@ -39,12 +39,12 @@ function get_all()
     for uuid, replicaset in pairs(vshard.router.routeall()) do
         local res = replicaset:callrw('api.data_api.get_all', nil)
         if res == nil then
-            error('res is nil')
+            return "res i nil!"
         end
 
         for i, entry in ipairs(res) do
             if entry ~= nil then
-                table.insert(data, entry:tomap())
+                table.insert(data, {uid = uuid, entry = entry})
             end
         end
     end

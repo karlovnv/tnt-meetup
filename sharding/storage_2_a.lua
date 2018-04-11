@@ -3,7 +3,7 @@ vshard = require('vshard')
 local data_api = require('data-api')
 
 local cfg = require('vshard-config')
-
+local os = require ('os')
 local name = 'storage_2_a'
 
 os.execute(string.format('mkdir -p %s', name))
