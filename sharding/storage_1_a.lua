@@ -20,7 +20,7 @@ box.once('init', function()
     box.schema.user.passwd('storage', 'storage')
 end)
 
-data_api.init()
+data_api.init(name)
 
 -- declaration of module with stored procedures
 -- api.my_api.say_hello2
