@@ -1,0 +1,4 @@
+run
+```
+tarantool init.lua
+```
