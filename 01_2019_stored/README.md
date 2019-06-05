@@ -1,4 +1,4 @@
-= Instructions 
+# Instructions 
 To run an app write in this directory
 
 ```
@@ -17,8 +17,8 @@ To view human readable wal use
 tarantoolctl cat <file .xlog>
 ```
 
-== Краткое описание лекции 
-=== Полезные ссылки 
+## Краткое описание лекции 
+### Полезные ссылки 
 ```
 Краткий экскурс в синтаксис Lua:
 http://tylerneylon.com/a/learn-lua/
@@ -27,7 +27,7 @@ Getting started:
 https://www.tarantool.io/ru/doc/1.10/book/getting_started/using_binary/
 ```
 
-=== Сервер приложений 
+### Сервер приложений 
 Если запустить тарантул, то открывается консоль с интерпретатором языка lua
 
 ```
