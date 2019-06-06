@@ -43,4 +43,12 @@ function m.create_or_update(id, name, age)
     return u:insert({id, name, age})
 end
 
+function m.new_func()
+   return "hello"
+end
+
+function m.hello()
+	return "world"
+end
+
 return m

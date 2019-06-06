@@ -5,7 +5,7 @@ box.cfg( {
 
 -- grant
 box.once('gr', function()
-  box.schema.user.grant('guest', 'read,write,execute', 'universe')
+--  box.schema.user.grant('guest', 'read,write,execute', 'universe')
 end)
 
 -- create space
